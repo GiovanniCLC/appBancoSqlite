@@ -10,6 +10,12 @@ type Props={
 
 export function AlunoForm({nome, email, onChangeNome, onChangeEmail, onSubmit}:Props){
     return (
-        
+       <View>
+        <TextInput/>
+        <TextInput/>
+        <TouchableOpacity>
+            <Text>Remover</Text>
+        </TouchableOpacity>
+       </View> 
     )
 }
