@@ -3,18 +3,18 @@ import {View, TextInput,TouchableOpacity, StyleSheet, Text} from 'react-native';
 type Props={
     nome: string,
     email: string,
-    onChangeNome:()=>void,
-    onChangeEmail:()=>void,
+    onChangeNome:(v: string)=>void,
+    onChangeEmail:(v: string)=>void,
     onSubmit:()=>void
 }
 
 export function AlunoForm({nome, email, onChangeNome, onChangeEmail, onSubmit}:Props){
     return (
        <View>
-        <TextInput/>
-        <TextInput/>
-        <TouchableOpacity>
-            <Text>Remover</Text>
+        <TextInput style={styles.input} placeholder='Nome' value={nome} onChangeText={onChangeNome}/>
+        <TextInput style={styles.input} placeholder='Email' value={email} onChangeText={onChangeEmail} keyboardType='email-address' autoCapitalize='none'/>
+        <TouchableOpacity style={styles.botao} onPress={onSubmit}>
+            <Text style={styles.botaotexto}>Remover</Text>
         </TouchableOpacity>
        </View> 
     )
@@ -38,7 +38,7 @@ botao:{
     marginBottom:20,
 },
 
-textobotao:{
+botaotexto:{
     color:"#F50909",
     fontSize:16,
     fontWeight:"700",
