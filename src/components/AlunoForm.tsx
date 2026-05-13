@@ -14,7 +14,7 @@ export function AlunoForm({nome, email, onChangeNome, onChangeEmail, onSubmit}:P
         <TextInput style={styles.input} placeholder='Nome' value={nome} onChangeText={onChangeNome}/>
         <TextInput style={styles.input} placeholder='Email' value={email} onChangeText={onChangeEmail} keyboardType='email-address' autoCapitalize='none'/>
         <TouchableOpacity style={styles.botao} onPress={onSubmit}>
-            <Text style={styles.botaotexto}>Remover</Text>
+            <Text style={styles.botaotexto}>Adicionar</Text>
         </TouchableOpacity>
        </View> 
     )
