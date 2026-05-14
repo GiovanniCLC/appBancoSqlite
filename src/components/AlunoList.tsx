@@ -13,10 +13,14 @@ export function AlunoList({alunos,onRemover}:Props){
         keyExtractor={(item)=>String(item.id)}
         renderItem={({item})=>(
             <AlunoItem aluno={item} onRemover={onRemover} />
+
         )}
+        ListEmptyComponent={
+            <Text style={styles.vazio}>Nenhum aluno cadastrado</Text>
+        }
         />
     )
 }
 const styles=StyleSheet.create({
-
+    vazio:{textAlign:'center',marginTop:40,color:'#999'}
 })
